@@ -3,9 +3,9 @@ Exam 3, problem 5.
 
 Authors: Vibha Alangar, Aaron Wilkin, David Mutchler, Dave Fisher, 
          Matt Boutell, Amanda Stouder, their colleagues and 
-         PUT_YOUR_NAME_HERE.  January 2019.
+         Thomas Hoevener.  January 2019.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -17,7 +17,7 @@ def main():
 
 
 ###############################################################################
-# TODO: 2.  READ the doc-string for the   is_prime   function defined below.
+# DONE: 2.  READ the doc-string for the   is_prime   function defined below.
 # It is the same as you have seen before.
 # After you UNDERSTAND the doc-string (JUST the doc-string, NOT the code),
 # ASKING QUESTIONS AS NEEDED, change the above _TODO_ to DONE.
@@ -67,7 +67,7 @@ def run_test_problem5():
     test_results = [0, 0]  # Number of tests passed, failed.
 
     # Test 1:
-    sequence = [[1,3,2], [10, 5], []]
+    sequence = [[1, 3, 2], [10, 5], []]
     expected = [3, 10]
     print_expected_result_of_test([sequence], expected,
                                   test_results, format_string)
@@ -148,6 +148,16 @@ def problem5(seq_of_seq):
     # TODO: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+    numbers = []
+    for k in range(len(seq_of_seq)):
+        largest = -1
+        for j in range(len(seq_of_seq[k])):
+            if largest < seq_of_seq[k][j]:
+                largest = seq_of_seq[k][j]
+        if largest != -1:
+            numbers.append(largest)
+    return numbers
+
 
 
 ###############################################################################
